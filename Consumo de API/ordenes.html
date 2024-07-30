@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computacion en la nube</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <br>
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#">Computacion en la nube</a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu de opciones</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="clientes.html">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="metodos_pagos.html">Metodos de Pago</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ordenes.html">Ordenes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ventas.html">Ventas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="facturas.html">Facturas</a>
+                    </li>
+            </ul>
+            
+            </div>
+        </div>
+        </div>
+  </nav>>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+           <br>
+            <img src="https://87903f6884.cbaul-cdnwnd.com/3a6e73ecb409f9c946ecf6c465cccac3/200000041-69c466abf5/Banner-clientes.jpg?ph=87903f6884" alt="" width="100%">
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <br>
+            <center><h1>Listado de Ordenes</h1></center>
+            <br>
+            <!-- Full screen modal -->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Agregar Orden
+            </button>
+        
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Ordenes</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <!-- Formulario para agregar datos -->
+                                    <form id="formularioOrden" method="post">
+                                        <div class="mb-3">
+                                            <label for="total" class="form-label">Total</label>
+                                            <input type="text" class="form-control" id="total" name="total" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="fecha" class="form-label">Fecha</label>
+                                            <input type="date" class="form-control" id="fecha" name="fecha" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="fecha_envio" class="form-label">Fecha_Envio</label>
+                                            <input type="date" class="form-control" id="fecha_envio" name="fecha_envio" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="fecha_llegada" class="form-label">Fecha_llegada</label>
+                                            <input type="date" class="form-control" id="fecha_llegada" name="fecha_llegada" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="direccion" class="form-label">Direccion</label>
+                                            <input type="text" class="form-control" id="direccion" name="direccion" required>
+                                        </div>
+                                       
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" form="formularioOrden" class="btn btn-primary">Agregar Orden</button>
+                    
+                    </div>
+                </div>
+                </div>
+            </div>
+            <br><br>
+            <table class="table">
+                <thead class="table-danger">
+                  <td>ID</td>
+                  <td>Total</td>
+                  <td>Fecha</td>
+                  <td>Fecha_Envio</td>
+                  <td>Fecha_Legada</td>
+                  <td>Direccion</td>
+                  
+                </thead>
+                <tbody id="cuerpoTable">
+                  
+                </tbody>
+              </table>
+
+        </div>
+
+    </div>
+
+</div>
+<br>
+
+<script>
+    function traerDatos() {
+        $.ajax({
+            type: "GET",
+            url: "http://18.208.211.107:3001/api/orders", // URL de ejemplo de la API
+            success: function(data) {
+                var cuerpoTable = $("#cuerpoTable");
+                cuerpoTable.empty(); // Limpiar la tabla antes de agregar nuevos datos
+                data.forEach(function(orders) {
+                    var fila = `<tr>
+                                    <td>${orders.id}</td>
+                                    <td>${orders.total_amount}</td>
+                                    <td>${orders.order_date}</td>
+                                    <td>${orders.shipping_date}</td> 
+                                    <td>${orders.shipping_address}</td> 
+                                    <td>${orders.direccion}</td> 
+                                    
+                                    
+                                </tr>`;
+                    cuerpoTable.append(fila);
+                });
+            },
+            error: function(xhr, status, error) {
+                console.error("Error al traer los datos", status, error);
+                console.error("Respuesta completa del servidor:", xhr);
+                console.error("Texto de respuesta:", xhr.responseText);
+            }
+        });
+    }
+
+    $("#formularioOrden").submit(function(event) {
+        event.preventDefault(); // Evitar el comportamiento por defecto del formulario
+
+        var total = parseFloat($("#total").val());
+        var fecha = $("#fecha").val();
+        var fecha_envio = $("#fecha_envio").val();
+        var fecha_llegada =$("#fecha_llegada").val();
+        var direccion = $("#direccion").val();
+        
+        
+
+        console.log("Datos a enviar:", {
+            total_amount: total,
+            order_date: fecha,
+            shipping_date: fecha_envio,
+            shipping_address: fecha_llegada,
+            direccion: direccion
+        });
+
+        $.ajax({
+            type: "POST",
+            url: "http://18.208.211.107:3001/api/orders", // URL para agregar datos
+            data: JSON.stringify({
+                total_amount: total,
+                order_date: fecha,
+                shipping_date: fecha_envio,
+                shipping_address: fecha_llegada,
+                direccion: direccion
+            }),
+            contentType: "application/json; charset=utf-8",
+            success: function(response) {
+                $("#staticBackdrop").modal('hide'); // Cerrar el modal
+                alert("Orden agregado con éxito");
+                traerDatos(); // Actualizar la tabla después de agregar un cliente
+                $("#formularioOrden")[0].reset(); // Limpiar el formulario
+            },
+            error: function(xhr, status, error) {
+                console.error("Error al agregar ", status, error);
+                console.error("Respuesta completa del servidor:", xhr);
+                console.error("Texto de respuesta:", xhr.responseText);
+            }
+        });
+    });
+
+    $(document).ready(function() {
+        traerDatos();
+    });
+</script>
+    
+</body>
